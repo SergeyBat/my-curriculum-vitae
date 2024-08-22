@@ -1,0 +1,10 @@
+@import '@/app/styles/media.scss';
+
+@mixin content-page-width {
+  width: var(--content-width);
+  margin: 0 auto;
+
+  @include media($small) {
+    width: 100%;
+  }
+}

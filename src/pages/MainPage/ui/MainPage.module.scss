@@ -1,0 +1,6 @@
+@import '@/app/styles/mixins';
+
+.main {
+  @include content-page-width;
+
+}

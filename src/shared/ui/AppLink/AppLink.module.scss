@@ -1,0 +1,50 @@
+.app-link {
+  display: flex;
+  text-decoration: none;
+  position: relative;
+  color: var(--white);
+  padding: 3px 0;
+  font: var(--font-l);
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(260deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    animation: draw-line 2s forwards; /* Анимация длится 2 секунды и останавливается на последнем кадре */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: right;
+  }
+
+
+  &:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  @keyframes draw-line {
+    to {
+      left: 0; /* Конечная позиция линии (внутри контейнера) */
+    }
+  }
+
+  &_primary {
+
+    &:hover {
+      color: var(--accent-redesigned);
+    }
+  }
+
+  &_red {
+    color: var(--cancel-redesigned);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
