@@ -1,0 +1,194 @@
+
+.about-me {
+  position: relative;
+
+  &__greeting {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 850px;
+    height: 240px;
+    animation: after-all-animation 0s 3.5s forwards;
+  }
+
+  &__greeting-text {
+    font-size: 240px; /* Размер текста */
+    width: 100%;
+    height: auto;
+    stroke: var(--primary-color); /* Цвет обводки */
+    stroke-width: 5px; /* Толщина обводки */
+    fill: transparent; /* Прозрачный основной текст */
+    font-family: Arial, sans-serif; /* Шрифт текста */
+    font-weight: bold; /* Жирный шрифт */
+    animation:
+      typing 3s steps(40, end) forwards,
+      scale-up 0.5s 3s forwards,
+      scale-down 0.5s 4s forwards,
+      pulsate infinite 4s ease-in-out;
+  }
+
+  &__my-profile {
+    opacity: 0;
+    animation: appearance 2s 3.5s forwards;
+    display: grid;
+    grid-template-columns: 1fr auto ;
+  }
+
+  &__left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__text-wrapper {
+    max-width: 670px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__my-name {
+    font-size: 55px;
+    line-height: 1;
+    background-image: linear-gradient(to right, var(--primary-2), var(--default-text-color));
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__about-me-preview-text {
+    color: var(--default-text-color);
+    font: var(--font-xl);
+    line-height: 1.5;
+  }
+
+  &__social-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  &__social-link {
+    color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    z-index: 1;
+    transition: 0.3s all;
+
+    &:hover {
+      color: var(--default-text-color);
+      background-color: var(--primary-color);
+    }
+  }
+
+  &__social-link-icon {
+    transition: 0.2s;
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+  }
+
+  &__curriculum-vitae-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 50px;
+    padding: 17px 35px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font: var(--font-l);
+    transition: 0.2s all;
+
+
+    &:hover {
+      color: var(--default-text-color);
+      background-color: var(--primary-color);
+    }
+  }
+
+  &__my-photo {
+    width: 360px;
+    height: 360px;
+    border-radius: 38px;
+    border: 2px solid var(--secondary-color);
+    transform: rotate(4.29deg);
+    transition: 0.4s all;
+    box-shadow: 34px -20px 90px 20px;
+
+
+    &:hover {
+      border: 2px solid var(--primary-color);
+      transform: rotate(0);
+    }
+  }
+}
+
+@keyframes typing {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  to { stroke-dashoffset: 0; }
+}
+
+/* Увеличение размера текста */
+@keyframes scale-up {
+  from { transform: scale(1); }
+  to {
+    transform: scale(1.05);
+    stroke: transparent; /* Убирает цвет обводки после увеличения */
+  }
+}
+
+/* Уменьшение размера текста и переход в поток */
+@keyframes scale-down {
+  from {
+    transform: scale(1.05);
+    font-size: 240px;
+  }
+  to {
+    transform: scale(1);
+    font-size: 65px;
+    position: static;
+    width: fit-content;
+    height: fit-content;
+    padding: 3px;
+  }
+}
+
+@keyframes after-all-animation {
+  to {
+    display: none;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes appearance {
+  to {
+    opacity: 1;
+  }
+}

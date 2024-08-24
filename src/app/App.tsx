@@ -15,9 +15,7 @@ function App() {
     <div className={b('', {}, [theme])}>
       <Suspense fallback="...loading">
         <Navbar/>
-        <main className={b('page_layout')}>
-          <AppRouter />
-        </main>
+        <AppRouter />
       </Suspense>
     </div>
   );

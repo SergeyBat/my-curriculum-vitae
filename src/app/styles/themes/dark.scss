@@ -1,8 +1,15 @@
 .app_dark_theme {
+  transition: 0.3s all;
+
   --bg-color: #0F0715;
   --second-bg-color: #050709;
 
   --nav-bar: #0F0715;
+
+  --default-text-color: #ffffff;
+
+  --shadow-color: rgba(114, 30, 255, 0.51);
+
 
   --white: #ffffff;
   --primary-color: #8750f7;

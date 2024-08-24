@@ -28,32 +28,34 @@ export const Navbar: FC<NavbarProps> = memo((props: NavbarProps) => {
         >
           sergey.bat2001@yandex.com
         </a>
-        <ul className={b('link-list')}>
-          <li>
-            <AppLink
-              className={b('link')}
-              to={getRouteMain()}
-            >
-              Обо мне
-            </AppLink>
-          </li>
-          <li>
-            <AppLink
-              className={b('link')}
-              to={getRouteProjects()}
-            >
-              Мои навыки
-            </AppLink>
-          </li>
-          <li>
-            <AppLink
-              className={b('link')}
-              to={getRouteSkills()}
-            >
-              Мои проекты
-            </AppLink>
-          </li>
-        </ul>
+        <nav>
+          <ul className={b('link-list')}>
+            <li>
+              <AppLink
+                className={b('link')}
+                to={getRouteMain()}
+              >
+                Обо мне
+              </AppLink>
+            </li>
+            <li>
+              <AppLink
+                className={b('link')}
+                to={getRouteProjects()}
+              >
+                Мои навыки
+              </AppLink>
+            </li>
+            <li>
+              <AppLink
+                className={b('link')}
+                to={getRouteSkills()}
+              >
+                Мои проекты
+              </AppLink>
+            </li>
+          </ul>
+        </nav>
         <ThemeSwitcher
           classNames={b('theme-switcher')}
         />

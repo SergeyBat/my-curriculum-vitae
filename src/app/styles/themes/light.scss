@@ -1,7 +1,14 @@
 .app_light_theme {
+  transition: 0.3s all;
+
   --bg-color: #ffffff;
 
   --nav-bar: #27274d;
+
+  --default-text-color: #005658;
+  --default-text-color-2: #000000;
+
+  --shadow-color: rgba(0, 86, 88, 0.51);
 
 
   --white: #ffffff;
