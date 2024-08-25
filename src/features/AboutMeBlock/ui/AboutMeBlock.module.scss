@@ -1,3 +1,4 @@
+@import '@/app/styles/mixins.scss';
 
 .about-me {
   position: relative;
@@ -32,6 +33,7 @@
     animation: appearance 2s 3.5s forwards;
     display: grid;
     grid-template-columns: 1fr auto ;
+    gap: 100px;
   }
 
   &__left-side {
@@ -48,11 +50,7 @@
   }
 
   &__my-name {
-    font-size: 55px;
-    line-height: 1;
-    background-image: linear-gradient(to right, var(--primary-2), var(--default-text-color));
-    background-clip: text;
-    color: transparent;
+    @include heading-text-theme;
   }
 
   &__about-me-preview-text {

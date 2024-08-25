@@ -1,0 +1,27 @@
+@import '@/app/styles/mixins';
+
+.my-skills-block {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    @include content-page-width;
+
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    @include heading-text-theme;
+  }
+
+  &__subtitle {
+    color: var(--default-text-color);
+    font: var(--font-xl);
+    line-height: 1.5;
+  }
+}

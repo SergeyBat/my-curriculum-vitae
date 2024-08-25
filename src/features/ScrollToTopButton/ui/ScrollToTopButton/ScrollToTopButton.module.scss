@@ -1,0 +1,23 @@
+.ScrollToTopButton {
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 110;
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+.ScrollToTopButton_visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.Icon {
+
+}

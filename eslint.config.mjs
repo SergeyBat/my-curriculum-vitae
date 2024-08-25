@@ -15,7 +15,8 @@ export default [
   {
     rules: {
       indent: ["error", 2],
-      "react/react-in-jsx-scope": "off"
+      "react/react-in-jsx-scope": "off",
+      "react/display-name": "off"
     }
 
   }

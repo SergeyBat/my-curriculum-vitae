@@ -50,6 +50,10 @@
     }
   }
 
+  a#{&}__link {
+    color: var(--white);
+  }
+
 
   button#{&}__theme-switcher {
     background-color: var(--nav-bar);

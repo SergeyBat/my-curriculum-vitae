@@ -5,13 +5,14 @@ import { bem } from '@/shared/lib/bem';
 
 const b = bem('app-link' ,styles);
 
-export type AppLinkVariant = 'primary' | 'red';
+export type AppLinkVariant = 'primary' | 'secondary';
 
 interface AppLinkProps extends LinkProps {
   className?: string;
   variant?: AppLinkVariant;
   children?: ReactNode;
   activeClassName?: string;
+  withoutActive?: boolean;
 }
 
 export const AppLink: FC<AppLinkProps> = memo((props: AppLinkProps) => {
@@ -21,6 +22,7 @@ export const AppLink: FC<AppLinkProps> = memo((props: AppLinkProps) => {
     children,
     variant = 'primary',
     activeClassName = '',
+    withoutActive = false,
     ...otherProps
   } = props;
 
@@ -28,8 +30,9 @@ export const AppLink: FC<AppLinkProps> = memo((props: AppLinkProps) => {
     <NavLink
       to={to}
       className={({ isActive }) =>
-        b('', { [activeClassName]: isActive, variant }, [
+        b('', { active: isActive && !withoutActive, [variant]: true, }, [
           className,
+          isActive && !withoutActive ? activeClassName: '',
         ])
       }
       {...otherProps}

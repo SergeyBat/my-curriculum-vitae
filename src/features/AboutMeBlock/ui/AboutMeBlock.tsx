@@ -9,6 +9,7 @@ import {
   faVk,
 } from '@fortawesome/free-brands-svg-icons';
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
+import {FC} from "react";
 
 const MyLinks = [
   {
@@ -25,9 +26,19 @@ const MyLinks = [
   }
 ]
 
-export const AboutMeBlock = () => {
+export interface IAboutMeBlockProps {
+  className?: string;
+}
+
+export const AboutMeBlock: FC<IAboutMeBlockProps> = (props) => {
+  const {
+    className,
+  } = props;
+
   return (
-    <article className={b('')}>
+    <article
+      className={b('', {}, [className])}
+    >
       <section className={b('greeting')}>
         <svg className={b('greeting-text')} viewBox="0 0 1000 300">
           <text
@@ -54,7 +65,7 @@ export const AboutMeBlock = () => {
               Я занимаюсь решением сложных задач<br/>
               пользовательского интерфейса, создавая<br/>
               интуитивно понятные и эффективные решения <br/>
-              на базе React, которые обеспечивают<br/>
+              на базе React и Vue3, которые обеспечивают<br/>
               исключительный пользовательский опыт.
             </p>
           </article>
@@ -67,7 +78,7 @@ export const AboutMeBlock = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Моё cv на hh.ru
+                  Перейти на hh.ru
                   <FontAwesomeIcon icon={faArrowRight}/>
                 </a>
               </li>

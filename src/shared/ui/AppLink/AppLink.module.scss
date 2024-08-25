@@ -2,9 +2,10 @@
   display: flex;
   text-decoration: none;
   position: relative;
-  color: var(--white);
-  padding: 3px 0;
+  color: var(--primary-link);
+  padding: 3px 2px;
   font: var(--font-l);
+  width: fit-content;
 
   &:before {
     content: "";
@@ -21,6 +22,29 @@
     transform-origin: right;
   }
 
+  &:hover {
+    color: var(--primary-2);
+  }
+
+  &_secondary {
+    color: var(--secondary-link);
+
+    &:before {
+      font: var(--font-m);
+      height: 2px;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      color: var(--primary-2);
+    }
+  }
+
+  &_active {
+    &:before {
+      transform: scaleX(1);
+    }
+  }
 
   &:hover:before {
     transform: scaleX(1);
@@ -30,21 +54,6 @@
   @keyframes draw-line {
     to {
       left: 0; /* Конечная позиция линии (внутри контейнера) */
-    }
-  }
-
-  &_primary {
-
-    &:hover {
-      color: var(--accent-redesigned);
-    }
-  }
-
-  &_red {
-    color: var(--cancel-redesigned);
-
-    &:hover {
-      opacity: 0.8;
     }
   }
 }

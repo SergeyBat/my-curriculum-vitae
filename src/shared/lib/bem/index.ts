@@ -44,7 +44,7 @@ export function bem(
     return [
       elementNameWithAffix,
       ...Object.entries(modifiers)
-        .filter(([_, value]) => Boolean(value))
+        .filter((item) => Boolean(item[1]))
         .map(([className]) => checkClassInModule(
           fullElementName.concat('_', className),
           styles

@@ -1,6 +1,32 @@
 @import '@/app/styles/mixins';
 
-.main {
-  @include content-page-width;
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 70px;
 
+  &__about-me {
+    @include content-page-width
+  }
+
+  &__my-skills {
+    width: 100%;
+    padding: 50px;
+    background-color: var(--second-bg-color);
+    opacity: 0;
+    animation: animate 2s 4.5s ease-in-out forwards;
+  }
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -36,6 +36,8 @@ body {
   margin-top: calc(var(--header-height) + 50px);
 }
 
-.page-wrapper {
-  width: 100%;
+.app__scroll-to-top {
+  position: fixed;
+  right: 50px;
+  bottom: 30px;
 }
